@@ -15,8 +15,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/proto/test_proto"
+	// "github.com/golang/protobuf/proto"
+	// "github.com/golang/protobuf/proto/test_proto"
 )
 
 var (
@@ -125,6 +125,7 @@ func TestObjectsAreEqual(t *testing.T) {
 	if ObjectsAreEqual('x', "x") {
 		t.Error("objectsAreEqual should return false")
 	}
+/*
 	if !ObjectsAreEqual(
 		&test_proto.GoTestField{
 			Label: proto.String("123"),
@@ -151,6 +152,7 @@ func TestObjectsAreEqual(t *testing.T) {
 	) {
 		t.Error("objectsAreEqual should return true") // different XXX_sizecache is still equal for proto
 	}
+*/
 	if ObjectsAreEqual("x", 'x') {
 		t.Error("objectsAreEqual should return false")
 	}
